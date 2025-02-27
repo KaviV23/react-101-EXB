@@ -4,11 +4,12 @@ phases:
     install:
         commands:
             - echo installing nodejs...
-            - echo curl -sL https://deb.nodesource.com/setup_12.x | bash -
+            - curl -sL https://deb.nodesource.com/setup_12.x | bash -
+            - apt-get update
             - apt-get install -y nodejs
             - echo installing yarn...
             - npm install --global yarn 
-    pre-builds:
+    pre_build:
         commands:
             - echo installing dependencies...
             - npm install
