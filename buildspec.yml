@@ -8,14 +8,14 @@ phases:
             - apt-get install -y nodejs
             - echo installing yarn...
             - npm install --global yarn 
-        pre-builds:
-            commands:
-                - echo installing dependencies...
-                - npm install
-        build:
-            commands:
-                - echo building...
-                - npm run build
+    pre-builds:
+        commands:
+            - echo installing dependencies...
+            - npm install
+    build:
+        commands:
+            - echo building...
+            - npm run build
 
 artifacts:
     files:
